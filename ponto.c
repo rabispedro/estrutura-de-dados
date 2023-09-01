@@ -1,18 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 #include<math.h>
 #include<assert.h>
 
 #include"./headers/ponto.h"
 
 struct ponto {
+	char* nome;
 	double x, y;
 };
 
-Ponto* constroi_ponto(double x, double y) {
+Ponto* constroi_ponto(char* nome, double x, double y) {
 	Ponto* p = (Ponto*) malloc(sizeof(Ponto));
 
 	if (p != NULL) {
+		p->nome = (char*) malloc(sizeof(char) * TAMANHO_NOME);
+		if (p->nome != NULL)
+			strcpy(p->nome, nome);
 		p->x = x;
 		p->y = y;
 	}
@@ -21,11 +26,15 @@ Ponto* constroi_ponto(double x, double y) {
 }
 
 void imprime_ponto(Ponto* p) {
-	printf("Ponto: (%4.3lf, %4.3lf)\n", p->x, p->y);
+	printf("Ponto %s: (%4.3lf, %4.3lf)\n", p->nome, p->x, p->y);
 }
 
 double distancia_pontos(Ponto* p1, Ponto* p2) {
 	return sqrt(pow((p1->x - p2->x), 2) + pow((p1->y - p2->y), 2));
+}
+
+int e_igual_ponto(Ponto* p, char* nome) {
+	return strcmp(p->nome, nome) == 0;
 }
 
 void destroi_ponto(Ponto* p) {
@@ -34,8 +43,8 @@ void destroi_ponto(Ponto* p) {
 
 void teste_ponto() {
 	//	Given	| Assume
-	Ponto* p1 = constroi_ponto(0.0, 0.0);
-	Ponto* p2 = constroi_ponto(1.0, 0.0);
+	Ponto* p1 = constroi_ponto("MARIA", 0.0, 0.0);
+	Ponto* p2 = constroi_ponto("BERNANDO CLAUDIO", 1.0, 0.0);
 
 	//	When	| Act
 	imprime_ponto(p1);

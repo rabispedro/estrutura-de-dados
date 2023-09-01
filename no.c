@@ -35,8 +35,8 @@ void destroi_no(No* no) {
 }
 
 void teste_no() {
-		//	Given	| Assume
-	Ponto* p = constroi_ponto(0.0, 0.0);
+	//	Given	| Assume
+	Ponto* p = constroi_ponto("Teste", 0.0, 0.0);
 	No* no = constroi_no(p);
 
 	//	When	| Act
