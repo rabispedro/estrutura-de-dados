@@ -12,13 +12,13 @@ int main(int argc, char** argv) {
 	uint8_t flagIteractive = 1;
 
 	for(int i=1; i<argc; i++) {
-		if(strcmp(argv[i], "test-info") == 0)
+		if(strcmp(argv[i], "--test-info") == 0 || strcmp(argv[i], "-TI") == 0)
 			tdd_info();
-		else if(strcmp(argv[i], "test-node") == 0)
+		else if(strcmp(argv[i], "--test-node") == 0 || strcmp(argv[i], "-TN") == 0)
 			tdd_node();
-		else if(strcmp(argv[i], "test-priority-queue") == 0)
+		else if(strcmp(argv[i], "--test-priority-queue") == 0 || strcmp(argv[1], "-TPQ") == 0)
 			tdd_priority_queue();
-		else if(strcmp(argv[i], "no-interactive") == 0)
+		else if(strcmp(argv[i], "--no-interactive") == 0 || strcmp(argv[i], "-NI") == 0)
 			flagIteractive = 0;
 	}
 
