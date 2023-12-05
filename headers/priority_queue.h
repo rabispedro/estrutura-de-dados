@@ -19,7 +19,6 @@ void enqueue_priority_queue(PriorityQueue* pq, Node* node);
 Node* dequeue_priority_queue(PriorityQueue* pq);
 void clear_priority_queue(PriorityQueue* pq);
 void print_priority_queue(PriorityQueue* pq);
-
 void tdd_priority_queue();
 
 #endif

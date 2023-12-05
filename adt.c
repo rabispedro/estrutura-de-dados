@@ -9,7 +9,7 @@ Info* construct_info(char* file, const uint8_t priority) {
 	Info* info = (Info*) malloc(sizeof(Info));
 
 	if(info != NULL) {
-		info->file = file;
+		strcpy(info->file, file);
 		info->priority = priority;
 	}
 
@@ -20,7 +20,7 @@ void destruct_info(Info* info) {
 	if(info == NULL)
 		return;
 
-	info->file = NULL;
+	strcpy(info->file, "");
 	free(info);
 	info = NULL;
 }

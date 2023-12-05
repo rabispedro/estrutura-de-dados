@@ -6,11 +6,11 @@
 #include "headers/adt.h"
 #include "headers/priority_queue.h"
 
-#define STR_SIZE 1024
-
 uint8_t menu();
 
 int main(int argc, char** argv) {
+	uint8_t flagIteractive = 1;
+
 	for(int i=1; i<argc; i++) {
 		if(strcmp(argv[i], "test-info") == 0)
 			tdd_info();
@@ -18,6 +18,8 @@ int main(int argc, char** argv) {
 			tdd_node();
 		else if(strcmp(argv[i], "test-priority-queue") == 0)
 			tdd_priority_queue();
+		else if(strcmp(argv[i], "no-interactive") == 0)
+			flagIteractive = 0;
 	}
 
 	PriorityQueue* pq = construct_priority_queue();
@@ -72,7 +74,9 @@ int main(int argc, char** argv) {
 			break;
 		}
 
-		system("read -p \"Digite algo para continuar: \"");
+		if(flagIteractive)
+			system("read -p \"Digite algo para continuar: \"");
+
 		system("clear");
 	} while(opt != 0);
 

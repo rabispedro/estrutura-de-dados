@@ -3,8 +3,10 @@
 
 #include <stdint.h>
 
+#define STR_SIZE 1 << 10
+
 struct info {
-	char* file;
+	char file[STR_SIZE];
 	uint8_t priority;
 } typedef Info;
 
