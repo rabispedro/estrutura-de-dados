@@ -126,6 +126,7 @@ void print_priority_queue(PriorityQueue* pq) {
 
 
 void tdd_priority_queue() {
+	printf("\t\tPriority Queue Tests\n");
 	PriorityQueue* pq1 = construct_priority_queue();
 
 	assert(pq1 != NULL);
@@ -209,4 +210,5 @@ void tdd_priority_queue() {
 	printf("\n");
 
 	destruct_priority_queue(pq1);
+	printf("\n\n");
 }

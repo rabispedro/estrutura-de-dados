@@ -33,6 +33,8 @@ void print_info(Info* info) {
 }
 
 void tdd_info() {
+	printf("\t\tInfo Tests\n");
+
 	Info* i1 = construct_info("Arquivo X\0", 0);
 
 	assert(i1 != NULL);
@@ -43,6 +45,8 @@ void tdd_info() {
 	printf("\n");
 
 	destruct_info(i1);
+
+	printf("\n\n");
 }
 
 Node* construct_node(Info* value, Node* next) {
@@ -77,6 +81,8 @@ void print_node(Node* node) {
 }
 
 void tdd_node() {
+	printf("\t\tNode Tests\n");
+
 	Info* i1 = construct_info("Arquivo X\0", 0);
 	Info* i2 = construct_info("X File\0", 10);
 	Info* i3 = construct_info("Arquivinho Chizinho\0", 2);
@@ -118,4 +124,6 @@ void tdd_node() {
 	destruct_node(n1);
 	destruct_node(n2);
 	destruct_node(n3);
+
+	printf("\n\n");
 }

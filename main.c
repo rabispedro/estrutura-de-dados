@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
 			tdd_info();
 		else if(strcmp(argv[i], "--test-node") == 0 || strcmp(argv[i], "-TN") == 0)
 			tdd_node();
-		else if(strcmp(argv[i], "--test-priority-queue") == 0 || strcmp(argv[1], "-TPQ") == 0)
+		else if(strcmp(argv[i], "--test-priority-queue") == 0 || strcmp(argv[i], "-TPQ") == 0)
 			tdd_priority_queue();
 		else if(strcmp(argv[i], "--no-interactive") == 0 || strcmp(argv[i], "-NI") == 0)
 			flagIteractive = 0;
