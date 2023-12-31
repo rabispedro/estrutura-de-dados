@@ -12,10 +12,10 @@ Este trabalho de Estrutura de Dados visa implementar uma Fila de Prioridades (Pr
 
 - Para compilar o código, é necessário a versão C11 do GCC;
 - Diretivas para adicionar na execução do projeto:
-  - `--no-interactive,-NI` - Exe'cutar o menu sem espera para limpar tela;
-  - `--test-info, -TI` - Executa'r os testes da estrutura Info;
-  - `--test-node, -TN` - Executa'r os testes da estrutura Node;
-  - `--test-priority-queue, -TPQ'` - Executar os testes da estrutura PriorityQueue;
+  - `--no-interactive,-NI` - Executar o menu sem espera para limpar tela;
+  - `--test-info, -TI` - Executar os testes da estrutura Info;
+  - `--test-node, -TN` - Executar os testes da estrutura Node;
+  - `--test-priority-queue, -TPQ` - Executar os testes da estrutura PriorityQueue;
 
 ```sh
 # Compilar
